@@ -1,0 +1,23 @@
+.layout_none{
+    margin: 0;
+    padding: 0;
+}
+
+.layout_relative{
+    position: relative;
+}
+
+.layout_float_left{
+    position: relative;
+    float: left;
+}
+
+.layout_float_right{
+    position: relative;
+    float: right;
+}
+
+.layout_float_top{
+    position: relative;
+    float: top;
+}

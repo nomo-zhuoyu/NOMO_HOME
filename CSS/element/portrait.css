@@ -1,0 +1,10 @@
+/*头像*/
+.portrait_circle {
+    width: 150px;
+    height: 150px;
+
+    background-size: 100% 100%;
+    margin: 20px auto 20px auto;
+    border: 0.3px solid black;
+    border-radius: 50%;
+}

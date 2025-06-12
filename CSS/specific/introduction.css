@@ -1,0 +1,476 @@
+ /*清除默认边界*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 列表样式 */
+ol, ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/*导航栏*/
+#navbar{
+    height: 70px;
+    width: 100%;
+
+    background-color: white;
+    opacity: 0.9;
+    z-index: 100;
+
+    position: fixed;
+}
+
+#navbar .navTag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#navbar .navTag a{
+    position: relative;
+
+    /* 过渡动画  */
+    color: rgba(31, 41, 55, 1); 
+    transition-property: color transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* 悬停状态 */
+#navbar .navTag a:hover {
+    color: #3b82f6;
+}
+
+/* 下划线效果 - 动态从左侧展开 */
+#navbar .navTag a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px; 
+    left: 0;
+    background-color: #3b82f6;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+#navbar .navTag a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/*简介*/
+section.brief{
+    position: relative;
+
+    height: 90vh;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+section.brief div.background{
+    position: absolute;
+    background-color: black;
+    margin-top: 70px;
+
+    inset: 0;
+    z-index: -1;
+}
+
+section.brief img.beif_background{
+    width: 100%;
+    opacity: 0.6;
+}
+
+section.brief div.prospect{
+    position: relative;
+    
+    z-index: 0;
+    text-align: center;
+}
+
+section.brief div.prospect .title{
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: bold;
+    color: white;
+    
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+section.brief div.prospect .content{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: rgb(229, 231, 235);
+    max-width: 36rem;
+    /* 水平居中 */
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 3rem;
+    text-wrap: balance;
+}
+
+section.brief div.prospect .link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+section.brief div.prospect .btn_contact{
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    
+    background-color: blue;
+    color: white;
+    
+    /* 圆角边框 */
+    border-radius: 9999px;
+
+    /* 过渡动画效果 */
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    text-decoration-line: none;
+}
+
+section.brief div.prospect .btn_contact:hover{
+    background-color: rgb(22, 22, 232);
+    transform: translateY(-10px);
+}
+
+section.brief div.prospect .btn_about {
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    
+    border: 2px solid white;
+    color: white;
+    
+    /* 圆角边框 */
+    border-radius: 9999px;
+
+    text-decoration-line: none;
+}
+
+section.brief div.prospect .btn_about:hover {
+    /* 半透明白色背景 */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 弹跳动画 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+section.brief .go_next{
+    position: absolute;
+    bottom: 40px;
+    
+    /*居中*/
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* 应用弹跳动画 */
+    animation: bounce 2s infinite;
+
+    text-decoration-line: none;
+    color: white;
+}
+
+.icon-with-pseudo::before {
+    content: "▼";
+    font-size: 1rem;
+}
+
+
+/* 内容板块样式 */
+h1.content_title{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: black;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* title的下划线 */
+h1.content_title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px; 
+    height: 2px;
+    background-color: blue;
+}
+
+section.begin_content{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+section.other_content{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.content_Text_Title{
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.content_Text {
+    margin: 0 10px auto 10px;
+
+    color: rgba(107, 114, 128, 1);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+
+
+div.center{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+/*左右布局*/
+div.container{
+    display: inline-block;
+    width: 100%;
+}
+
+div.container div.left{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+div.container div.right{
+    justify-content: center;
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+/*个人信息表格*/
+table.introTable{
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+table.introTable td.introTable_Key {
+    position: relative;
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    
+    color: gray;
+    font-weight: 500;
+    width: 33.333333%;
+    /* border-bottom: rgb(170, 170, 201) solid 1px; */
+}
+
+table.introTable td.introTable_Value{
+    position: relative;
+    padding-top: 0.75rem auto 0.75rem;
+    margin-right: 5px;
+    /* border-bottom: rgb(170, 170, 201) solid 1px; */
+}
+
+/* 底部边框 */
+table.introTable td.introTable_Key::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -2px;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(170, 170, 201);
+}
+
+table.introTable td.introTable_Value::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(170, 170, 201);
+}
+
+
+.backgroundColor_lightBlue{
+    background-color: rgba(109, 171, 193, 0.1);  
+}
+
+
+.margin_left_20{
+    margin-left: 20px;
+}
+
+.margin_top_10{
+    margin-top: 10px;
+}
+
+
+.font_medium {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+    /* 表单输入样式 */
+.form-input-style {
+    display: block;
+    width: 80%;
+    padding: 10px 8px; 
+    margin: 15px auto auto auto;
+
+    border-radius: 4px; 
+    border: 1px solid rgba(209, 213, 219, 1); 
+    
+    /* 焦点状态样式 */
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.form-input-style-nonResize{
+    resize: none;
+}
+
+/* 焦点状态 */
+.form-input-style:focus {
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 0.5rem rgba(59, 130, 246, 0.2);
+}
+
+button.submit_button {
+    display: flex;
+    width: 80%;
+    padding: 6px 4px; 
+    background-color: #3b82f6; 
+    color: white;
+    border-radius: 4px;
+
+    margin: 20px auto auto auto;
+
+    align-items: center;
+    justify-content: center;
+    
+    /* 过渡动画 */
+    transition: all 0.2s ease;
+}
+
+button.submit_button:hover {
+    background-color: rgba(59, 130, 246, 0.9); 
+    transform: translateY(-2px);
+}
+
+
+
+/* 时间轴 */
+div.yearLine {
+    /* 为直接子元素添加底部边距 */
+    > * + * {
+        margin-top: 2rem;
+    }
+}
+
+div.yearLine div.yearNode {
+    position: relative;
+    
+    padding-left: 3rem;
+    border-left: 2px solid;
+
+    border-color: rgba(229, 231, 235, 1);
+    
+    padding-bottom: 2rem;
+}
+
+div.yearLine div.yearNode div.circle {
+    position: absolute;
+    
+    left: -0.75rem;
+    top: 0;
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    border-radius: 50%;
+    
+    background-color: #3b82f6;
+}
+
+div.yearLine div.yearNode span.timeBadge {
+    display: inline-block;
+    
+    padding: 0.25rem 0.75rem;
+
+    background-color: rgba(59, 130, 246, 0.1);
+    
+    color: #3b82f6; 
+    
+    font-size: 0.875rem;
+    font-weight: 500;
+    
+    border-radius: 0.25rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+div.yearLine div.yearNode .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+div.yearLine div.yearNode .describe {
+    color: rgba(107, 114, 128, 1);
+    margin-bottom: 0.75rem;
+}
+
+div.yearLine div.yearNode ul.display {
+    padding-left: 20px;
+}
+
+/* 子元素间距 */
+div.yearLine div.yearNode ul.display > * {
+    list-style-type: disc;
+    color: rgba(107, 114, 128, 1);
+}

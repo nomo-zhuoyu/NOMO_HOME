@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/specific/introduction.css">
+        <link rel="stylesheet" href="../CSS/baseStyle/layout.css">
+        <link rel="stylesheet" href="../CSS/baseStyle/text.css">
+        <link rel="stylesheet" href="../CSS/baseStyle/shape.css">
+        <link rel="stylesheet" href="../CSS/baseStyle/animation.css">
+
+        <link rel="stylesheet" href="../CSS/element/terminal.css">
+        <link rel="stylesheet" href="../CSS/element/portrait.css">
+    </head>
+
+    <body>
+        <header id="navbar">
+            <div  class="terminal layout_float_left">
+                <a class="text_default terminal-usrname animation_toFontWhite animation_toBackgroundGreen" href="../HTML/index.html">nomo-zhuoyu</a> <span class="terminal-path">: ~/Introduction$</span> <span class="terminal-cursor"></span>
+            </div>
+
+
+            <!-- 桌面导航 -->
+            <nav class="layout_float_right shape_height_full">
+                <div class="navTag layout_float_left shape_height_full">
+                    <a class="text_default" href="#about">关于我</a>
+                </div>
+                <div class="navTag layout_float_left shape_height_full">
+                    <a class="text_default" href="#skills">技能</a>
+                </div>
+                <div class="navTag layout_float_left shape_height_full">
+                    <a class="text_default" href="#experience">经历</a>
+                </div>
+                <div class="navTag layout_float_left shape_height_full">
+                    <a class="text_default" href="#contact">联系我</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <!-- 简介 -->
+            <section class="brief">
+                <!-- 背景图片 -->
+                <div class="background">
+                    <img src="../res/img/bref_intro_background.png" alt="背景图片" class="beif_background">
+                </div>
+                
+                <!-- 前景文字 -->
+                <div class="prospect">
+                    <h1 class="title">
+                        Who Is <span style="color: aqua;">NOMO</span>
+                    </h1>
+
+                    <p class="content">
+                        一名热爱学习与创新的开发者，<br>
+                        以代码为凿，凿开世界未及之境。
+                    </p>
+
+                    <div class="link">
+                        <a href="#contact" class="btn_contact">
+                            联系我
+                        </a>
+                        <a href="#about" class="btn_about">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 向下滚动指示 -->
+                <a href="#about" class="go_next">
+                    <i class="icon-with-pseudo"></i>
+                </a>
+            </section>
+
+            <!-- 关于我 -->
+            <section id="about" class="begin_content">
+                <h1 class="content_title">关于我</h1>
+
+                <div class="container">
+                    <div class="left">
+                        <div class="portrait_circle" style="background-image: url(../res/img/head.png);"></div>
+
+                        <h3 class="content_Text_Title">个人简介</h3>
+                        <p class="content_Text">
+                            我是NOMO，一名拥有2年经验的后端开发者。我热衷于编写便捷高效而有意义的创新服务，
+                            同时关注用户体验和技术实现的平衡。
+                        </p>
+                        <p class="content_Text">
+                            我在读于南京理工大学计算机科学与工程学院，将获得计算机科学与技术学士学位和“卓越工程师”证书。
+                            毕业后，我规划向人工智能算法领域拓进，发展为有自底向上开发经验、有丰富跨领域经验的AI工程师。
+                        </p>
+                    </div>
+
+                    <div class="right">
+                        <!-- 个人信息表格 -->
+                        <h4 class="content_Text_Title">个人信息</h4>
+                        <div class="center">
+                            <table class="introTable backgroundColor_lightBlue">
+                                <tr>
+                                    <td class="introTable_Key">姓名</td>
+                                    <td class="introTable_Value">NOMO</td>
+                                </tr>
+                                <tr>
+                                    <td class="introTable_Key">专业</td>
+                                    <td class="introTable_Value">计算机科学与技术</td>
+                                </tr>
+                                <tr>
+                                    <td class="introTable_Key">邮箱</td>
+                                    <td class="introTable_Value">thinkingagin@163.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="introTable_Key">地址</td>
+                                    <td class="introTable_Value">四川省成都市武侯区</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+
+            <!-- 专业技能 -->
+            <section id="skills" class="other_content">
+                <h1 class="content_title">专业技能</h1>
+
+                <ol>
+                    <li>Qt5 - 掌握Qt的界面开发方式、信号与槽的传递机制</li>
+                    <li>HTML5 & CSS3 - 掌握现代布局技术和响应式设计</li>
+                    <li>版本控制 - 熟练使用Git进行团队协作</li>
+                </ol>
+            </section>
+
+            
+
+            <!-- 经历 -->
+            <section id="experience" class="other_content">
+                <!-- 教育背景 -->
+                <div>
+                    <h1 class="content_title">教育背景</h1>
+                    
+                    <div class="yearLine">
+                        <!-- 教育背景1 -->
+                        <div class="yearNode">
+                            <div class="circle"></div>
+                            <span class="timeBadge">
+                                2021年 - 2026年
+                            </span>
+                            <div class="container">
+                                <div class="left">
+                                    <h4 class="title">计算机科学与技术学士（在读）</h4>
+                                    <p class="describe">南京理工大学计算机科学与工程学院</p>
+                                    <ul class="display">
+                                        <li>主修课程： 计算机组成原理、计算机网络、编译原理、机器学习</li>
+                                        <li>课程设计：基于Qt5复刻《帝国时代1》</li>
+                                        <li>获得校级优秀三好学生称号</li>
+                                        <li>参与计算机学院学业指导工作</li>
+                                    </ul>
+                                </div>
+                                <div class="right">
+                                    <img src="../res/img/universityLOGO.png" alt="南京理工大学计算机学院" style="width: 100%;" usemap="#toNJUST">
+                                    <map name="toNJUST">
+                                        <area shape="rect" coords="0,0,200,55" href="https://www.njust.edu.cn/xxjj/list.htm" alt="南京理工大学">
+                                        <area shape="rect" coords="210,0,450,55" href="https://cs.njust.edu.cn/1715/list.htm" alt="南京理工大学">
+                                    </map>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 教育背景2 -->
+                        <div class="yearNode">
+                            <div class="circle"></div>
+                            <span class="timeBadge">
+                                2018年 - 2021年
+                            </span>
+                            <h4 class="title">高中</h4>
+                            <p class="describe">四川省成都市西北中学</p>
+                            <ul class="display">
+                                <li>重点班，主修理科</li>
+                                <li>参加全国中学生物理竞赛，获得省级二等奖</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 联系我 -->
+            <section id="contact" class="other_content">
+                <h1 class="content_title">联系我</h1>
+                <div class="container">
+                    <div class="left">
+                        <!-- 联系信息 -->
+                        <div>
+                            <h3 class="content_Text_Title">联系方式</h3>
+                            
+                            <p class="content_Text">
+                                无论你是想讨论项目合作、技术交流、还是只是想打个招呼，
+                                我都很乐意听取你的意见。你可以通过以下方式与我联系。
+                            </p>
+                            
+                            <div class="margin_left_20">
+                                <div class="margin_top_10">
+                                    <h4 class="font_medium">地址</h4>
+                                    <p class="content_Text">江苏省南京市玄武区孝陵卫200号南京理工大学</p>
+                                </div>
+                                
+                                <div class="margin_top_10">
+                                    <h4 class="font_medium">邮箱</h4>
+                                    <p class="content_Text">thinkingagin@163.com</p>
+                                </div>
+                                
+                                <div class="margin_top_10">
+                                    <h4 class="font_medium">电话</h4>
+                                    <p class="content_Text">+86 18981806270</p>
+                                </div>
+
+                                <div class="margin_top_10">
+                                    <h4 class="font_medium">工作时间</h4>
+                                    <p class="content_Text">周一至周五: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <!-- 留言表单 -->
+                        <h3 class="content_Text_Title">给我留言</h3>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <input type="text" id="name" class="form-input-style" placeholder="您的姓名">
+                        
+                            <input type="email" id="email" class="form-input-style" placeholder="您的邮箱">
+                        
+                            <input type="text" id="subject" class="form-input-style" placeholder="主题">
+                        
+                            <textarea id="message" rows="5" class="form-input-style form-input-style-nonResize" placeholder="留言内容"></textarea>
+                        
+                            <button type="submit" class="submit_button">
+                                发送留言
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
